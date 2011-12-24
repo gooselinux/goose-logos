@@ -4,23 +4,31 @@
 Name: goose-logos
 Summary: GoOSe Linux logos and artwork. 
 Version: 60.0.14
-Release: 3%{?dist}
+Release: 4%{?dist}
 Group: System Environment/Base
 # No upstream, do in dist-cvs
 Source0: goose-logos-%{version}.tar.bz2
 
 License: GPL+, CC-BY-SA
 URL: http://gooseproject.org/
+
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
-Conflicts: anaconda-images <= 10
-Provides: system-logos = %{version}-%{release}
+
 Obsoletes: desktop-backgrounds-basic <= 60.0.1-1.el6
 Provides: desktop-backgrounds-basic = %{version}-%{release}
-Conflicts: redhat-artwork <= 5.0.5
 Requires(post): coreutils
+
 # For _kde4_appsdir macro:
 BuildRequires: kde-filesystem
+
+Obsoletes:  redhat-logos
+Provides:   redhat-logos = %{version}-%{release}
+Provides:   system-logos = %{version}-%{release}
+
+Conflicts:  fedora-logos
+Conflicts:  anaconda-images <= 10
+Conflicts:  redhat-artwork <= 5.0.5
 
 %description
 GoOSe Linux artwork and branding elements
