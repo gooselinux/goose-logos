@@ -3,11 +3,11 @@
 
 Name: goose-logos
 Summary: GoOSe Linux logos and artwork. 
-Version: 60.0.14
-Release: 4%{?dist}
+Version: 60.0.15
+Release: 1%{?dist}
 Group: System Environment/Base
 # No upstream, do in dist-cvs
-Source0: goose-logos-%{version}.tar.bz2
+Source0: goose-logos-%{version}.tar.gz
 
 License: GPL+, CC-BY-SA
 URL: http://gooseproject.org/
@@ -187,6 +187,8 @@ fi
 # end i386 bits
 
 %changelog
+* Thu May 17 2012 Clint Savage <herlo@gooseproject.org>  60.0.15-1
+- Updated anaconda and firstboot images
 
 * Tue Dec 23 2011 Clint Savage <herlo@gooseproject.org>  60.0.14-3
 - Put in temporary GoOSe artwork and migrate content from generic-logos package
