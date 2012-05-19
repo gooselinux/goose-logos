@@ -113,6 +113,7 @@ popd
 
 # wallpaper theme
 mkdir -p $RPM_BUILD_ROOT/%{_datadir}/wallpapers/
+cp -rp kde-plasma/GL6/ $RPM_BUILD_ROOT/%{_datadir}/wallpapers
 pushd $RPM_BUILD_ROOT/%{_datadir}/wallpapers/GL6/contents/images
 #ln -s %{_datadir}/backgrounds/1920x1200_day.png 1920x1200.png
 ln -s %{_datadir}/backgrounds/default.png 1920x1200.png
