@@ -4,7 +4,7 @@
 Name: goose-logos
 Summary: GoOSe Linux logos and artwork. 
 Version: 60.0.15
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: System Environment/Base
 # No upstream, do in dist-cvs
 Source0: goose-logos-%{version}.tar.gz
@@ -113,7 +113,6 @@ popd
 
 # wallpaper theme
 mkdir -p $RPM_BUILD_ROOT/%{_datadir}/wallpapers/
-cp -rp kde-plasma/GL6/ $RPM_BUILD_ROOT/%{_datadir}/wallpapers
 pushd $RPM_BUILD_ROOT/%{_datadir}/wallpapers/GL6/contents/images
 #ln -s %{_datadir}/backgrounds/1920x1200_day.png 1920x1200.png
 ln -s %{_datadir}/backgrounds/default.png 1920x1200.png
@@ -187,6 +186,9 @@ fi
 # end i386 bits
 
 %changelog
+* Fri May 18 2012 Clint Savage <herlo@gooseproject.org>  60.0.15-2
+- Added installer and website to images
+
 * Thu May 17 2012 Clint Savage <herlo@gooseproject.org>  60.0.15-1
 - Updated anaconda and firstboot images
 
