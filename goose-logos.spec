@@ -4,7 +4,7 @@
 Name: goose-logos
 Summary: GoOSe Linux logos and artwork. 
 Version: 60.0.15
-Release: 2%{?dist}
+Release: 3%{?dist}
 Group: System Environment/Base
 # No upstream, do in dist-cvs
 Source0: goose-logos-%{version}.tar.gz
@@ -187,6 +187,9 @@ fi
 # end i386 bits
 
 %changelog
+* Sat May 19 2012 Clint Savage <herlo@gooseproject.org>  60.0.15-3
+- Fixed progress_first.png to match splash.png
+
 * Fri May 18 2012 Clint Savage <herlo@gooseproject.org>  60.0.15-2
 - Added installer and website to images
 
